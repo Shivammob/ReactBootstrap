@@ -1,0 +1,166 @@
+.hero {
+  position: relative;
+  padding: 60px 0;
+  background: url(../images/banner_bg.png);
+  // background: url(../images/technology/Group\ 2546.png) no-repeat;
+  // background-size: 100%;
+  background-repeat:  no-repeat;
+  background-position: center;
+  height: 600px;
+
+  &.herosmall {
+    padding: 120px 0;
+    // background: url(../images/technology/hero_bg.png) no-repeat;
+  }
+
+  &-down-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 45px;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 40px 0;
+    height: 100%;
+    background-size: cover;
+  }
+
+  &-left {
+    p {
+      line-height: 1.71;
+    }
+  }
+}
+
+.bulleye {
+
+  &-wrap {
+    &-bg img:nth-child(1) {
+      position: relative;
+      z-index: 1;
+    }
+
+    &-bg {
+      img:nth-child(2) {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        animation: rotate 1s infinite;
+      }
+
+      &-bottom {
+        img:nth-child(2) {
+          bottom: -18px;
+          top: unset;
+        }
+      }
+    }
+  }
+}
+
+
+.clients {
+  &-slider {
+    .swiper-wrapper {
+      -webkit-transition-timing-function:linear!important; 
+      -o-transition-timing-function:linear!important;
+      transition-timing-function:linear!important; 
+    }
+    .slide-track {
+      position: relative;
+      &:before {
+        content: "";
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        z-index: 2;
+        background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+        @media only screen and (max-width: 767px) {
+          width: 100px;
+        }
+      }
+      &:after {
+        content: "";
+        height: 100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        z-index: 2;
+        background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+        transform: rotateZ(180deg);
+        @media only screen and (max-width: 767px) {
+          width: 100px;
+        }
+      }
+      .slider1 {
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 25px;
+          &:nth-child(odd) {
+            background: #fafafa;
+          }
+        }
+      }
+      .slider2 {
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 25px;
+           &:nth-child(even) {
+             background: #fafafa;
+           }
+        }
+       }
+    }
+  }
+}
+
+
+.roas {
+  padding: 65px 0;
+  background: url(../images/roas_bg.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  @media only screen and (max-width: 767px) {
+    background-size: unset;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 1.5;
+    @media only screen and (max-width: 767px) {
+      font-size: 25px;
+    }
+  }
+}
+
+
+
+@keyframes colorbg {
+  0% {
+    // background-image: linear-gradient(180deg, transparent, transparent 50%, #42d29eb5  50%, #42d29eb5 100%), linear-gradient(1800deg, #fff, #fff, #fff, #fff, #fff);
+    background-size: 3px 14px, 100% 20px;
+  }
+  100% {
+    // background-image: linear-gradient(1800deg, transparent, transparent 50%, #fff 50%, #fff 100%), linear-gradient(180deg, #49C5ED4D, #49C5ED4D, #49C5ED4D, #49C5ED4D, #49C5ED4D);
+    background-size: 3px 10px, 100% 20px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

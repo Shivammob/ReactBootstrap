@@ -1,0 +1,66 @@
+.getintouch {
+    input {
+        height: 48px;
+        &:focus {
+         background-color: unset;
+        }
+        &::placeholder {
+            color: $color7;
+            opacity: 1; /* Firefox */
+          }
+          
+          ::-ms-input-placeholder { /* Edge 12-18 */
+            color: $color7;
+        }
+    }
+    textarea {
+        &:focus {
+            background-color: unset;
+        }
+        &::placeholder {
+            color: $color7;
+            opacity: 1; /* Firefox */
+          }
+          
+          ::-ms-input-placeholder { /* Edge 12-18 */
+            color: $color7;
+        }
+    }
+    input, textarea {
+        color: $color7;
+        font-size: 14px;
+        background: #006CD60A;
+        border: 1px solid #006CD670
+    }
+}
+
+.headquaters {
+    background: url(../images/contact/globe.png) no-repeat;
+    background-position: center top;
+    .gradientheading1 {
+        position: relative;
+        font-weight: 600;
+        // text-align: justify;
+        &:before {
+          content: url(../images/contact/quotes.svg);
+          position: absolute;
+          right: 90%;
+          bottom: 100%;
+        }
+        &:after {
+            content: url(../images/contact/quotes.svg);
+            position: absolute;
+            left: 80%;
+            top: 90%;
+            transform: rotate(180deg);
+            @media only screen and (min-width: 1024px) {
+                left: 80%;
+                top: 80%;
+            }
+            @media only screen and (max-width: 767px) {
+                top: 95%;
+                left: 90%;
+            }
+        }
+    }
+}
